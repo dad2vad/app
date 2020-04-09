@@ -1,0 +1,19 @@
+{
+  "name": "v",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -p",
+    "terraform": "yarn build && terraform apply -auto-approve",
+    "deploy": "yarn build && node ./scripts/deploy.js",
+    "p": "yarn build && wrangler publish"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
+    "webpack": "^4.42.1"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "description": ""
+}
